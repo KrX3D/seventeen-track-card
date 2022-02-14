@@ -56,7 +56,7 @@ class SeventeenTrackCard extends HTMLElement {
             </td>
             <td>${elem.info_text}</td>
             <td>${elem.location != null && elem.location != '' ? elem.location : 'Unknown'}</td>
-            <td>${elem.timestamp.slice(8, -1)}</td>
+            <td>${elem.timestamp.slice(1, -9)}</td>
           </tr>
       `).join('')}
     `;
