@@ -54,8 +54,9 @@ class SeventeenTrackCard extends HTMLElement {
                 ${elem.friendly_name != null && elem.friendly_name != '' ? elem.friendly_name : elem.tracking_number}
               </a>
             </td>
-            <td>${elem.timestamp}</td>
+            <td>${elem.info_text}</td>
             <td>${elem.location != null && elem.location != '' ? elem.location : 'Unknown'}</td>
+            <td>${elem.timestamp}</td>
           </tr>
       `).join('')}
     `;
@@ -65,8 +66,9 @@ class SeventeenTrackCard extends HTMLElement {
         <thead>
           <tr>
             <th>Title</th>
-            <th>Time</th>
+            <th>Status</th>
             <th>Location</th>
+            <th>Time</th>
           </tr>
         </thead>
       <tbody>
