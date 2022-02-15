@@ -15,7 +15,7 @@ class SeventeenTrackCard extends HTMLElement {
     const state = hass.states[entityId];
     const packages = state.attributes.packages != null ? state.attributes.packages : [];
     
-    this.packages.sort((a, b) => {            
+    packages.sort((a, b) => {            
             if(this.hass.states[a].state.attributes.packages.timestamp > this.hass.states[b].state.attributes.packages.timestamp) return 1;
             if(this.hass.states[b].state.attributes.packages.timestamp > this.hass.states[a].state.attributes.packages.timestamp) return -1;
             
