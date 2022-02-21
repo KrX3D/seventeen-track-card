@@ -12,8 +12,6 @@ class SeventeenTrackCard extends HTMLElement {
 
   set hass(hass) {
     const entityId = this.config.entity;
-    const location = this.config.location || true;
-    const lastupdate = this.config.lastupdate || true;
     const state = hass.states[entityId];
     const packages = state.attributes.packages != null ? state.attributes.packages : [];
     
@@ -57,13 +55,7 @@ class SeventeenTrackCard extends HTMLElement {
               </a>
             </td>
             <td>${elem.info_text}</td>
-            
-            if(this.location == true) {
-              <td>${elem.location != null && elem.location != '' ? elem.location : 'Unknown'}</td>
-            }
-            if(this.lastupdate == true) {
-              <td>${elem.timestamp.slice(0, -9).replace("T", " ")}</td>
-            }
+            <td>${elem.timestamp.slice(0, -9).replace("T", " ")}</td>
       `).join('')}
     `;
 
@@ -73,7 +65,6 @@ class SeventeenTrackCard extends HTMLElement {
           <tr>
             <th>Title</th>
             <th>Status</th>
-            <th>Location</th>
             <th>Last Update</th>
           </tr>
         </thead>
