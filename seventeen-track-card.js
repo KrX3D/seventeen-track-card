@@ -12,8 +12,8 @@ class SeventeenTrackCard extends HTMLElement {
 
   set hass(hass) {
     const entityId = this.config.entity;
-    const location = this.config.location;
-    const lastupdate = this.config.lastupdate;
+    const location = this.config.location || true;
+    const lastupdate = this.config.lastupdate || true;
     const state = hass.states[entityId];
     const packages = state.attributes.packages != null ? state.attributes.packages : [];
     
