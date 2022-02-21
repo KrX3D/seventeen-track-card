@@ -57,8 +57,13 @@ class SeventeenTrackCard extends HTMLElement {
               </a>
             </td>
             <td>${elem.info_text}</td>
-            <td>${elem.location != null && elem.location != '' ? elem.location : 'Unknown'}</td>
-            <td>${elem.timestamp.slice(0, -9).replace("T", " ")}</td>
+            
+            if(this.location == true) {
+              <td>${elem.location != null && elem.location != '' ? elem.location : 'Unknown'}</td>
+            }
+            if(this.lastupdate == true) {
+              <td>${elem.timestamp.slice(0, -9).replace("T", " ")}</td>
+            }
       `).join('')}
     `;
 
@@ -68,12 +73,8 @@ class SeventeenTrackCard extends HTMLElement {
           <tr>
             <th>Title</th>
             <th>Status</th>
-            if(this.location == true) {
-              <th>Location</th>
-            }
-            if(this.lastupdate == true) {
-              <th>Last Update</th>
-            }
+            <th>Location</th>
+            <th>Last Update</th>
           </tr>
         </thead>
       <tbody>
