@@ -12,6 +12,8 @@ class SeventeenTrackCard extends HTMLElement {
 
   set hass(hass) {
     const entityId = this.config.entity;
+    const location = this.config.location;
+    const lastupdate = this.config.lastupdate;
     const state = hass.states[entityId];
     const packages = state.attributes.packages != null ? state.attributes.packages : [];
     
@@ -66,8 +68,12 @@ class SeventeenTrackCard extends HTMLElement {
           <tr>
             <th>Title</th>
             <th>Status</th>
-            <th>Location</th>
-            <th>Last Update</th>
+            if(this.location == true) {
+              <th>Location</th>
+            }
+            if(this.lastupdate == true) {
+              <th>Last Update</th>
+            }
           </tr>
         </thead>
       <tbody>
