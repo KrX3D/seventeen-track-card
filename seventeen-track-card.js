@@ -24,7 +24,7 @@ class SeventeenTrackCard extends HTMLElement {
       style.textContent = `
         table {
           width: 100%;
-          padding: 50 50px 50px 100px;
+          padding: 0 32px 32px 32px;
         }
         thead th {
           text-align: left;
@@ -65,7 +65,7 @@ class SeventeenTrackCard extends HTMLElement {
           <tr>
             <th>Title</th>
             <th>Status</th>
-            <th>Last Update</th>
+            <th style="width:70%">Last Update</th>
           </tr>
         </thead>
       <tbody>
