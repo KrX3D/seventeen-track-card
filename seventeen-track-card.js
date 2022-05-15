@@ -65,7 +65,7 @@ class SeventeenTrackCard extends HTMLElement {
           <tr>
             <th>Title</th>
             <th>Status</th>
-            <th style="width:30%">Last Update</th>
+            <th style="width:25%">Last Update</th>
           </tr>
         </thead>
       <tbody>
