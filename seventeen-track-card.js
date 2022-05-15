@@ -24,7 +24,7 @@ class SeventeenTrackCard extends HTMLElement {
       style.textContent = `
         table {
           width: 100%;
-          padding: 0 32px 32px 32px;
+          padding: 0 32px 20px 46px;
         }
         thead th {
           text-align: left;
