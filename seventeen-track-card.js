@@ -47,7 +47,7 @@ class SeventeenTrackCard extends HTMLElement {
     }
 
     const content = `
-      ${packages.map((elem => `
+      ${packages.map(elem => `
           <tr>
             <td>
               <a href="https://17track.net/en/track#nums=${elem.tracking_number}" target='_blank'>
@@ -56,7 +56,7 @@ class SeventeenTrackCard extends HTMLElement {
             </td>
             <td>${elem.info_text != null && elem.info_text != '' ? elem.info_text : []}</td>
             <td>${elem.timestamp != null && elem.timestamp != '' ? elem.timestamp.slice(0, -9).replace("T", " ") : []}</td>
-      `).join('')).sort()}
+      `).join('')}
     `;
 
     this.content.innerHTML = `
