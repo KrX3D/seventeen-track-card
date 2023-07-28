@@ -43,7 +43,7 @@ class SeventeenTrackCard extends HTMLElement {
           background-color: var(--secondary-background-color);
         }
     	/* Add the style for separating rows here */
-    	tbody tr {
+    	tbody tr:not(:last-child) {
       	box-shadow: 0 1px 0 0 var(--primary-color);
     	}
         td a {
