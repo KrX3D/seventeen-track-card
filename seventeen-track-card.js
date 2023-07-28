@@ -42,7 +42,6 @@ class SeventeenTrackCard extends HTMLElement {
         tbody tr:nth-child(even) {
           background-color: var(--secondary-background-color);
         }
-        /* Add the style for separating rows here */
         tbody tr:not(:last-child) {
       	   border-bottom: 1px solid var(--primary-color);
         }
